@@ -10,7 +10,8 @@ A simple full-stack e-commerce web application developed as part of the CodeAlph
 - Product Listing
 - Product Details
 - Shopping Cart
-- Add and Remove Products from Cart
+- Add Products to Cart
+- Remove Products from Cart
 - Cart Quantity Management
 - Checkout
 - Order Placement
@@ -38,7 +39,7 @@ A simple full-stack e-commerce web application developed as part of the CodeAlph
 
 - MySQL
 
-### Other Tools
+### Other Tools and Packages
 
 - Git
 - GitHub
@@ -46,6 +47,8 @@ A simple full-stack e-commerce web application developed as part of the CodeAlph
 - Express Session
 - Bcrypt
 - Method Override
+- Dotenv
+- Nodemon
 
 ## Project Structure
 
@@ -53,8 +56,10 @@ A simple full-stack e-commerce web application developed as part of the CodeAlph
 CodeAlpha_Ecommerce/
 │
 ├── public/
-│   └── css/
-│       └── style.css
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   └── images/
 │
 ├── views/
 │   ├── home.ejs
@@ -71,40 +76,112 @@ CodeAlpha_Ecommerce/
 ├── db.js
 ├── package.json
 ├── package-lock.json
+├── README.md
 └── .gitignore
-
-Database
+## Database
 
 The application uses MySQL with the following tables:
-
 users
 products
 orders
 order_items
-How to Run
-Clone the repository.
+
+## How to Run
+
+1. Clone the Repository
+
+Clone this repository to your local system.
+
+2. Open the Project
+
 Open the project folder in VS Code.
-Install dependencies:
+
+3. Install Dependencies
+
 npm install
-Create a .env file and add your MySQL database details.
+
+4. Configure Environment Variables
+
+Create a .env file in the project root and add your MySQL database details:
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=YOUR_MYSQL_PASSWORD
 DB_NAME=ecommerce
-Make sure MySQL is running.
-Start the server:
+
+Do not upload the .env file to GitHub.
+
+5. Start MySQL
+
+Make sure your local MySQL server is running.
+
+6. Start the Server
+
 node app.js
 
-For development with nodemon:
+For development using Nodemon:
 
 npx nodemon app.js
-Open:
+
+7. Open the Application
+
+Open the following URL in your browser:
+
 http://localhost:8080
-Internship Project
+
+## Main Application Routes
+
+Route	            Description
+
+/	                Home page
+/products	        Product listing
+/products/:id	    Product details
+/cart           	Shopping cart
+/register       	User registration
+/login          	User login
+/logout         	User logout
+/checkout       	Checkout page
+/place-order    	Place an order
+/order-success/:id	Order confirmation
+/my-orders      	User's orders
+
+## Project Workflow
+
+User Registration
+        ↓
+      Login
+        ↓
+   View Products
+        ↓
+ View Product Details
+        ↓
+   Add to Cart
+        ↓
+     Checkout
+        ↓
+   Place Order
+        ↓
+  Order Confirmation
+        ↓
+    My Orders
+
+## Security
+
+User passwords are hashed using Bcrypt before being stored in the database.
+Database credentials are stored in environment variables.
+.env is excluded from GitHub using .gitignore.
+User sessions are handled using Express Session.
+
+## Internship Project
 
 This project was developed as part of the CodeAlpha Full Stack Development Internship.
 
-Author
+## Task
+
+Task 1 – Simple E-commerce Store
+
+The project includes product management, shopping cart functionality, user registration and login, checkout, order processing, and database integration.
+
+## Author
 
 Vaibhavi Gupta
 ```
