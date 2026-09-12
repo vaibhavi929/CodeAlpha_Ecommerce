@@ -131,19 +131,20 @@ http://localhost:8080
 
 ## Main Application Routes
 
-Route	            Description
+| Route                | Description        |
+| -------------------- | ------------------ |
+| `/`                  | Home page          |
+| `/products`          | Product listing    |
+| `/products/:id`      | Product details    |
+| `/cart`              | Shopping cart      |
+| `/register`          | User registration  |
+| `/login`             | User login         |
+| `/logout`            | User logout        |
+| `/checkout`          | Checkout page      |
+| `/place-order`       | Place an order     |
+| `/order-success/:id` | Order confirmation |
+| `/my-orders`         | User's orders      |
 
-/	                Home page
-/products	        Product listing
-/products/:id	    Product details
-/cart           	Shopping cart
-/register       	User registration
-/login          	User login
-/logout         	User logout
-/checkout       	Checkout page
-/place-order    	Place an order
-/order-success/:id	Order confirmation
-/my-orders      	User's orders
 
 ## Project Workflow
 
