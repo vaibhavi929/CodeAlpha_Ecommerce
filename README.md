@@ -78,6 +78,7 @@ CodeAlpha_Ecommerce/
 ├── package-lock.json
 ├── README.md
 └── .gitignore
+```
 ## Database
 
 The application uses MySQL with the following tables:
@@ -184,4 +185,3 @@ The project includes product management, shopping cart functionality, user regis
 ## Author
 
 Vaibhavi Gupta
-```
